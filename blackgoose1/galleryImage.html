@@ -1,0 +1,52 @@
+<html><head>
+	<meta charset="utf-8">
+	<title>Black Goose Bistro</title>
+	<link rel="stylesheet" href="CSS/blackgoose.css">
+	<script src="js/blackgoosebistro.js"></script>
+	<script>
+		window.onload = function(){
+
+
+				
+			const urlParams = new URLSearchParams(window.location.search);	
+			const image = urlParams.get('type');
+			var imgDiv = document.getElementById('galleyImgDiv');
+			if(image == 'bread' || image == 'burgers' || image == 'fish')
+				imgDiv.innerHTML ='<picture><source media="(min-width: 480px)" srcset="images/'+image+'-1200.jpg 1200w, images/'+image+'-800 800w" sizes="80vw"><img alt="'+image+'" src="images/'+image+'-800.jpg"></picture>';
+			else
+				imgDiv.innerHTML ='<img alt="'+image+'" src="images/'+image+'-800.jpg">';
+
+			switch(image){
+				case 'bread':
+					document.getElementById('imgTitle').innerHTML = 'Gallery: Baked Goods';
+					break;
+				case 'burgers':
+					document.getElementById('imgTitle').innerHTML = 'Gallery: Burgerlicious';
+				break;
+				case 'chicken':
+					document.getElementById('imgTitle').innerHTML = 'Gallery: Finger Licken Chicken';
+				break;
+				case 'fish':
+					document.getElementById('imgTitle').innerHTML = 'Gallery: Fish the other white meat';
+				break;
+				case 'fries':
+					document.getElementById('imgTitle').innerHTML = 'Gallery: Fries to cry for';
+				break;
+				case 'tabouleh':
+					document.getElementById('imgTitle').innerHTML = 'Gallery: Not terriable Tabouleh';
+				break;				
+			}
+
+		};
+	</script>
+</head>
+<body>
+	<div>
+		<h1 id="imgTitle">Gallery: Baked Goods</h1>
+	</div>
+	<div id="galleyImgDiv"><picture><source media="(min-width: 480px)" srcset="images/bread-1200.jpg 1200w, images/bread-800 800w" sizes="80vw"><img alt="bread" src="images/bread-800.jpg"></picture></div>
+	<div style="text-align: center;">
+		<a href="gallery.html"><p id="backToGallery">Back to Gallery</p></a>
+	</div>
+	
+</body></html>
