@@ -1,0 +1,41 @@
+<html><head>
+	<meta charset="utf-8">
+	<title>Resume</title>
+	<script>
+		function changeImgSize(ele){
+			targetEle = document.getElementById(ele+'Img');
+			if(targetEle.width == 200)
+				targetEle.width = 600;
+			else
+				targetEle.width = 200;
+		}
+	</script>
+</head>
+<body>
+	<h1>Isaac Riggleman</h1>
+	<p>Contact me:<br>(407)484-2854<br><a href="mailto:rigglemanisaac@gmail.com">rigglemanisaac@gmail.com</a></p>
+	
+	<h2>Background</h2>
+	<p>I graduated in 2020 from Seminole High School, while in high school I studied Digital Design. Currently I attend Seminole State College studying digital media with a specialization in graphic design.</p>
+	
+	<h2>Expirence</h2>
+	<ul>
+		<li>Certified in Adobe Photoshop</li>
+		<li>Certified in Adobe Illustrator</li>
+		<li>Fluent in all Adobe programs</li>
+		<li>Expirence in UX (Freelance)</li>
+		<li>Video editing and photography</li>
+		<li>3D modeling within Blender</li>
+		<li>Art (charcoal, Acrylic, Oil, Pencil)</li>
+
+		</ul>
+	<h2>Examples</h2>
+	<p>Here are some samples of my recent work (10/13/21).</p>
+	<h1>Digital Illustrations</h1>
+	<a id="killers" href="javascript: void(0)" onclick="changeImgSize(this.id)"><img id="killerImg" class="someImg" src="killers.png" width="200" alt="Recent picture I drew for Halloween!"></a><br>
+	<a id="alien" href="javascript: void(0)" onclick="changeImgSize(this.id)"><img id="alienImg" class="someImg" src="alien.png" width="200" alt="Drawing of an alien from alien i'm working on currently"></a><br>
+
+	<h2>Links</h2>
+	<a href="https://www.instagram.com/at3digital/" target="_blank"><h3>My Digital Art Instagram</h3></a>
+	
+</body></html>
